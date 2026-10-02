@@ -1,0 +1,7 @@
+project_id = "myportfolio-ia-lab"
+[functions.demo-login]
+verify_jwt = false
+[functions.ai-chat]
+# The handler validates the bearer token with Supabase Auth before any AI call.
+# Manual validation supports projects using new JWT signing keys.
+verify_jwt = false

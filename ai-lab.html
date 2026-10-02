@@ -1,0 +1,679 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f4f5f0" />
+    <meta
+      name="description"
+      content="Une expérience interactive pour comprendre, explorer et expérimenter l'intelligence artificielle."
+    />
+    <title>IA — Comprendre. Explorer. Expérimenter.</title>
+    <link rel="icon" href="assets/logos/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/config.js"></script>
+    <script type="module" src="js/app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Aller au contenu</a>
+    <div class="page-transition" aria-hidden="true">
+      <span class="team-logo" data-logo="team"
+        ><span class="team-symbol">✳</span></span
+      ><span>UNE NOUVELLE PERSPECTIVE.</span>
+    </div>
+    <div class="cursor" aria-hidden="true"></div>
+    <div class="reading-progress" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href="#ia" aria-label="IA, début de l'expérience"
+        ><span class="brand-mark">iA<span>®</span></span
+        ><span class="brand-caption">LE LABORATOIRE<br />DES POSSIBLES</span></a
+      >
+      <nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+        <a href="#comprendre">Comprendre</a
+        ><a href="#apprentissage">Apprentissage</a
+        ><a href="#evolution">Évolution</a><a href="#modeles">Modèles</a
+        ><a href="#experience">Expérience ↗</a>
+      </nav>
+      <div class="header-end">
+        <span
+          class="school-logo"
+          data-logo="school"
+          aria-label="Logo de l'école"
+          ><span>ÉCOLE</span></span
+        ><button
+          class="menu-toggle"
+          aria-controls="main-nav"
+          aria-expanded="false"
+          aria-label="Ouvrir la navigation"
+        >
+          <span></span><span></span>
+        </button>
+      </div>
+    </header>
+    <main id="main">
+      <section class="hero" id="ia" aria-labelledby="hero-title">
+        <div class="hero-grid" aria-hidden="true"></div>
+        <canvas
+          class="hero-canvas"
+          data-scene="sphere"
+          aria-hidden="true"
+        ></canvas>
+        <div class="hero-top">
+          <p class="eyebrow">
+            <span class="status-dot"></span> EXPOSITION INTERACTIVE / 2026
+          </p>
+          <p class="mono">HUMAIN × MACHINE<br />UNE NOUVELLE PERSPECTIVE</p>
+        </div>
+        <div class="hero-heading">
+          <div class="hero-label">
+            <span class="team-logo" data-logo="team"
+              ><span class="team-symbol">✳</span></span
+            ><span>UNE EXPLORATION<br />DE L’INTELLIGENCE</span>
+          </div>
+          <h1 id="hero-title">
+            <span class="title-line">L’INTELLIGENCE</span
+            ><span class="title-line outlined"
+              >ARTIFICIELLE<span class="title-dot">.</span></span
+            >
+          </h1>
+        </div>
+        <div class="sphere-caption mono" aria-hidden="true">
+          <span>FIG. 001</span><span>RÉSEAU EN MOUVEMENT</span
+          ><span class="crosshair">+</span>
+        </div>
+        <div class="hero-bottom">
+          <div>
+            <p class="welcome" id="welcome">Bienvenue dans le laboratoire.</p>
+            <p class="hero-manifesto">
+              Comprendre.<br />Explorer.<br /><span>Expérimenter.</span>
+            </p>
+          </div>
+          <div class="hero-intro">
+            <p>
+              Une technologie qui apprend, raisonne et transforme notre manière
+              d’interagir avec le monde.
+            </p>
+            <a class="button magnetic" href="#comprendre"
+              >Commencer l’exploration <span>↘</span></a
+            >
+          </div>
+          <div class="hero-scroll mono">
+            <span>DÉFILER POUR DÉCOUVRIR</span><span class="scroll-line"></span
+            ><span>↓</span>
+          </div>
+        </div>
+      </section>
+      <div class="ticker" aria-hidden="true">
+        <div>
+          INTELLIGENCE ARTIFICIELLE <span>✳</span> UNE NOUVELLE PERSPECTIVE
+          <span>✳</span> COMPRENDRE LE MONDE DE DEMAIN
+          <span>✳</span> INTELLIGENCE ARTIFICIELLE <span>✳</span> UNE NOUVELLE
+          PERSPECTIVE
+          <span>✳</span>
+        </div>
+      </div>
+      <section
+        class="section understand"
+        id="comprendre"
+        aria-labelledby="understand-title"
+      >
+        <div class="section-meta">
+          <span>01 / COMPRENDRE</span><span>DES DONNÉES AUX IDÉES</span>
+        </div>
+        <div class="section-heading">
+          <h2 class="reveal" id="understand-title">
+            Une machine.<br />Des milliards de<br /><em>possibilités.</em>
+          </h2>
+          <div class="section-lead reveal">
+            <span class="tiny-label">QU’EST-CE QUE L’IA ?</span>
+            <p>
+              L’intelligence artificielle désigne des systèmes capables
+              d’effectuer des tâches comme reconnaître une image, analyser un
+              texte ou proposer une réponse.
+            </p>
+            <p class="muted">
+              Ils s’appuient sur des règles ou sur des modèles appris à partir
+              d’exemples. Produire une réponse convaincante ne garantit ni la
+              vérité, ni une compréhension humaine.
+            </p>
+          </div>
+        </div>
+        <div
+          class="pipeline reveal"
+          aria-label="Les quatre étapes d'un modèle d'IA"
+        >
+          <div class="pipeline-line" aria-hidden="true"></div>
+          <button
+            class="pipeline-step active"
+            data-stage="0"
+            aria-pressed="true"
+          >
+            <span class="step-icon" aria-hidden="true">⠿</span
+            ><span class="mono">01</span><strong>Données</strong></button
+          ><button class="pipeline-step" data-stage="1" aria-pressed="false">
+            <span class="step-icon" aria-hidden="true">∿</span
+            ><span class="mono">02</span><strong>Apprentissage</strong></button
+          ><button class="pipeline-step" data-stage="2" aria-pressed="false">
+            <span class="step-icon" aria-hidden="true">◈</span
+            ><span class="mono">03</span><strong>Modèle</strong></button
+          ><button class="pipeline-step" data-stage="3" aria-pressed="false">
+            <span class="step-icon" aria-hidden="true">↗</span
+            ><span class="mono">04</span
+            ><strong>Prédiction / génération</strong>
+          </button>
+        </div>
+        <p class="pipeline-caption" id="pipeline-caption" aria-live="polite">
+          Tout commence par des exemples : textes, images, sons ou mesures. Leur
+          qualité influence le résultat.
+        </p>
+        <div class="concepts">
+          <span class="tiny-label">LE VOCABULAIRE ESSENTIEL</span>
+          <div>
+            <details open>
+              <summary><span>01</span>Machine learning <span>+</span></summary>
+              <p>
+                L’apprentissage automatique trouve des régularités dans des
+                données plutôt que de programmer chaque règle. Exemple :
+                reconnaître un courriel indésirable à partir de messages
+                étiquetés.
+              </p>
+            </details>
+            <details>
+              <summary><span>02</span>Deep learning <span>+</span></summary>
+              <p>
+                L’apprentissage profond utilise des réseaux neuronaux comportant
+                plusieurs couches. Les premières repèrent des caractéristiques
+                simples ; les suivantes les combinent en représentations plus
+                complexes.
+              </p>
+            </details>
+            <details>
+              <summary><span>03</span>Réseaux neuronaux <span>+</span></summary>
+              <p>
+                Des unités de calcul reliées par des poids transforment des
+                nombres. Pendant l’entraînement, les poids sont ajustés pour
+                réduire l’erreur. Cette inspiration biologique ne reproduit pas
+                un cerveau humain.
+              </p>
+            </details>
+            <details>
+              <summary>
+                <span>04</span>Modèles génératifs <span>+</span>
+              </summary>
+              <p>
+                Ils produisent de nouveaux contenus à partir de structures
+                apprises : texte, image, son ou code. Les résultats peuvent être
+                utiles, mais aussi inexacts ou biaisés.
+              </p>
+            </details>
+            <details>
+              <summary>
+                <span>05</span>Modèles de langage · LLM <span>+</span>
+              </summary>
+              <p>
+                Un grand modèle de langage apprend des relations entre des
+                fragments de texte, appelés tokens. Il génère une suite de
+                tokens selon le contexte. Les systèmes conversationnels ajoutent
+                des consignes, des outils et parfois une recherche documentaire.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+      <section
+        class="neural-section dark"
+        id="reseau"
+        aria-labelledby="neural-title"
+      >
+        <div class="section-meta">
+          <span>02 / EXPLORER</span
+          ><span class="live-tag"
+            ><span class="status-dot"></span> RÉSEAU INTERACTIF</span
+          >
+        </div>
+        <div class="neural-heading">
+          <h2 class="reveal" id="neural-title">
+            L’information<br /><em>prend vie.</em>
+          </h2>
+          <p class="reveal">
+            Un signal entre. Des connexions le transforment.<br />Une sortie se
+            dessine.<br /><span class="muted"
+              >Survolez les neurones ou lancez un signal.</span
+            >
+          </p>
+        </div>
+        <div class="neural-stage">
+          <canvas data-scene="network" aria-hidden="true"></canvas>
+          <div class="network-labels mono">
+            <span>ENTRÉE</span><span>COUCHES CACHÉES</span
+            ><span>TRAITEMENT</span><span>SORTIE</span>
+          </div>
+        </div>
+        <div class="neural-controls">
+          <label for="signal-strength"
+            >Intensité du signal <output id="signal-value">65 %</output
+            ><input
+              type="range"
+              id="signal-strength"
+              min="10"
+              max="100"
+              value="65" /></label
+          ><button class="button light magnetic" id="send-signal">
+            Propager un signal <span>↗</span>
+          </button>
+          <p class="mono" id="network-status" role="status">
+            VISUALISATION PÉDAGOGIQUE · SANS ENTRAÎNEMENT RÉEL
+          </p>
+        </div>
+      </section>
+      <section
+        class="section learning"
+        id="apprentissage"
+        aria-labelledby="learning-title"
+      >
+        <div class="section-meta">
+          <span>03 / APPRENTISSAGE</span><span>ESSAYER. MESURER. AJUSTER.</span>
+        </div>
+        <div class="learning-layout">
+          <div class="learning-sticky">
+            <h2 id="learning-title" class="reveal">
+              Apprendre,<br />c’est <em>ajuster.</em>
+            </h2>
+            <p>
+              Un modèle ne devient pas performant par magie. Il progresse au fil
+              des exemples et des corrections.
+            </p>
+            <div class="learning-number" aria-hidden="true">
+              0<span id="learning-number">1</span
+              ><span class="number-dot">.</span>
+            </div>
+            <p class="mono">SIX ÉTAPES / UN PROCESSUS</p>
+          </div>
+          <div class="learning-steps">
+            <article class="learning-step reveal" data-learn="1">
+              <div class="learn-viz dots-viz" aria-hidden="true">
+                ⠿ ⠿ ⠿<br />⠿ ⠿ ⠿
+              </div>
+              <span class="mono">01 / OBSERVER</span>
+              <h3>Collecter les données.</h3>
+              <p>
+                Rassembler des exemples pertinents, autorisés et variés. Des
+                données mal choisies peuvent transmettre des biais.
+              </p>
+            </article>
+            <article class="learning-step reveal" data-learn="2">
+              <div class="learn-viz bars-viz" aria-hidden="true">
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+              </div>
+              <span class="mono">02 / S’ENTRAÎNER</span>
+              <h3>Confronter le modèle aux exemples.</h3>
+              <p>
+                Le modèle produit une réponse. Une fonction de perte mesure
+                l’écart avec l’objectif d’entraînement.
+              </p>
+            </article>
+            <article class="learning-step reveal" data-learn="3">
+              <div class="learn-viz pattern-viz" aria-hidden="true">
+                ○ ○ ● ○<br />○ ● ○ ○<br />● ○ ○ ○
+              </div>
+              <span class="mono">03 / REPÉRER</span>
+              <h3>Détecter les motifs.</h3>
+              <p>
+                Des régularités se dégagent : des contours dans une image, des
+                associations de mots, des tendances dans des nombres.
+              </p>
+            </article>
+            <article class="learning-step reveal" data-learn="4">
+              <div class="learn-viz adjust-viz" aria-hidden="true">
+                <span>−</span><span>⟷</span><span>+</span>
+              </div>
+              <span class="mono">04 / CORRIGER</span>
+              <h3>Ajuster les paramètres.</h3>
+              <p>
+                Une méthode d’optimisation modifie les poids afin de réduire
+                l’erreur. Le cycle se répète sur de nombreux exemples.
+              </p>
+            </article>
+            <article class="learning-step reveal" data-learn="5">
+              <div class="learn-viz test-viz" aria-hidden="true">✓</div>
+              <span class="mono">05 / VÉRIFIER</span>
+              <h3>Tester sur l’inconnu.</h3>
+              <p>
+                Des données séparées de l’entraînement servent à évaluer la
+                généralisation. Mémoriser les exemples ne suffit pas.
+              </p>
+            </article>
+            <article class="learning-step reveal" data-learn="6">
+              <div class="learn-viz use-viz" aria-hidden="true">↗</div>
+              <span class="mono">06 / UTILISER</span>
+              <h3>Passer à l’inférence.</h3>
+              <p>
+                Le modèle entraîné traite de nouvelles entrées. On surveille ses
+                limites ; une conversation ne réentraîne pas automatiquement ses
+                poids.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section
+        class="timeline-section"
+        id="evolution"
+        aria-labelledby="timeline-title"
+      >
+        <div class="timeline-sticky">
+          <div class="section-meta">
+            <span>04 / ÉVOLUTION</span><span>UNE HISTOIRE EN MOUVEMENT</span>
+          </div>
+          <div class="timeline-heading">
+            <h2 id="timeline-title" class="reveal">
+              L’idée d’hier.<br /><em>Le monde d’aujourd’hui.</em>
+            </h2>
+            <div class="timeline-arrows">
+              <button id="timeline-prev" aria-label="Étape précédente">←</button
+              ><button id="timeline-next" aria-label="Étape suivante">→</button>
+            </div>
+          </div>
+          <div
+            class="timeline-window"
+            tabindex="0"
+            role="region"
+            aria-label="Chronologie de l'IA, défilement horizontal"
+          >
+            <div class="timeline-track" id="timeline-track"></div>
+          </div>
+          <p class="mono timeline-hint">FAITES DÉFILER L’HISTOIRE →</p>
+        </div>
+      </section>
+      <section
+        class="section models"
+        id="modeles"
+        aria-labelledby="models-title"
+      >
+        <div class="section-meta">
+          <span>05 / MODÈLES</span
+          ><span>PLUSIEURS APPROCHES. UN MÊME HORIZON.</span>
+        </div>
+        <div class="section-heading">
+          <h2 id="models-title" class="reveal">
+            Des intelligences.<br /><em>Au pluriel.</em>
+          </h2>
+          <p class="section-lead reveal">
+            Derrière les interfaces, des familles de modèles. Leur capacité
+            dépend de la version, des outils disponibles et du contexte
+            d’utilisation.
+          </p>
+        </div>
+        <div class="model-tabs" role="tablist" aria-label="Familles de modèles">
+          <button
+            role="tab"
+            aria-selected="true"
+            aria-controls="model-panel"
+            id="tab-gpt"
+            data-model="gpt"
+            tabindex="0"
+          >
+            OpenAI <strong>GPT</strong><span>01</span></button
+          ><button
+            role="tab"
+            aria-selected="false"
+            aria-controls="model-panel"
+            id="tab-claude"
+            data-model="claude"
+            tabindex="-1"
+          >
+            Anthropic <strong>Claude</strong><span>02</span></button
+          ><button
+            role="tab"
+            aria-selected="false"
+            aria-controls="model-panel"
+            id="tab-gemini"
+            data-model="gemini"
+            tabindex="-1"
+          >
+            Google <strong>Gemini</strong><span>03</span>
+          </button>
+        </div>
+        <div
+          class="model-panel dark"
+          id="model-panel"
+          role="tabpanel"
+          aria-labelledby="tab-gpt"
+          tabindex="0"
+        >
+          <div class="model-art" aria-hidden="true">
+            <div id="model-symbol" class="model-symbol gpt"></div>
+            <span class="mono">ARCHITECTURE / LANGAGE / POSSIBILITÉS</span>
+          </div>
+          <div class="model-copy">
+            <span class="eyebrow" id="model-company"></span>
+            <h3 id="model-name"></h3>
+            <p id="model-description"></p>
+            <dl id="model-details"></dl>
+            <a
+              class="text-link"
+              id="model-source"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Documentation officielle ↗</a
+            >
+          </div>
+        </div>
+        <p class="model-note muted">
+          Présentation des familles, sans classement ni promesse de performance.
+          Les versions et informations sont modifiables dans le fichier de
+          données du projet.
+        </p>
+      </section>
+      <section class="section multimodal" aria-labelledby="multi-title">
+        <div class="section-meta">
+          <span>06 / MULTIMODALITÉ</span><span>AU-DELÀ DES MOTS</span>
+        </div>
+        <div class="multimodal-layout">
+          <div>
+            <h2 id="multi-title" class="reveal">
+              Voir. Écouter.<br />Lire. <em>Relier.</em>
+            </h2>
+            <p>
+              Une IA multimodale peut traiter plusieurs formes d’information.
+              Les modalités prises en charge varient selon le modèle et son
+              interface.
+            </p>
+            <p class="muted" id="modality-description" aria-live="polite">
+              Choisissez une modalité pour découvrir un exemple.
+            </p>
+          </div>
+          <div class="orbit" role="group" aria-label="Explorer les modalités">
+            <svg class="orbit-trace" viewBox="0 0 200 200" aria-hidden="true">
+              <circle
+                cx="100"
+                cy="100"
+                r="90"
+                fill="none"
+                stroke="#6e845f"
+                stroke-width="1"
+              />
+            </svg>
+            <div class="orbit-ring ring-one" aria-hidden="true"></div>
+            <div class="orbit-ring ring-two" aria-hidden="true"></div>
+            <div class="orbit-core" aria-hidden="true">iA<span>✳</span></div>
+            <button class="modality text" data-modality="texte">
+              Aa<span>TEXTE</span></button
+            ><button class="modality image" data-modality="image">
+              ▧<span>IMAGE</span></button
+            ><button class="modality audio" data-modality="audio">
+              ≋<span>AUDIO</span></button
+            ><button class="modality video" data-modality="video">
+              ▷<span>VIDÉO</span></button
+            ><button class="modality code" data-modality="code">
+              &lt;/&gt;<span>CODE</span>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section
+        class="section experiment"
+        id="experience"
+        aria-labelledby="experiment-title"
+      >
+        <div class="section-meta">
+          <span>07 / EXPÉRIMENTER</span><span>À VOUS DE JOUER</span>
+        </div>
+        <div class="experiment-layout">
+          <div class="experiment-intro">
+            <span class="eyebrow"
+              ><span class="status-dot"></span> LE LAB EST OUVERT</span
+            >
+            <h2 id="experiment-title" class="reveal">
+              La meilleure<br />question ?<br /><em>La vôtre.</em>
+            </h2>
+            <p>
+              Expérimentez l’IA. Explorez un concept, demandez une analogie ou
+              remettez une réponse en question.
+            </p>
+            <p class="muted">
+              Un assistant peut se tromper. Vérifiez les informations
+              importantes et ne partagez pas de données personnelles.
+            </p>
+            <button class="text-link" id="new-conversation">
+              Nouvelle conversation ↗
+            </button>
+          </div>
+          <div class="chat">
+            <div class="chat-header">
+              <div class="chat-avatar">✳</div>
+              <div>
+                <strong>Assistant pédagogique</strong
+                ><span id="chat-mode">Connexion au laboratoire…</span>
+              </div>
+              <span class="status-dot"></span>
+            </div>
+            <div
+              class="chat-messages"
+              id="chat-messages"
+              role="log"
+              aria-label="Conversation avec l'assistant"
+              aria-live="polite"
+              aria-relevant="additions"
+            >
+              <article class="message assistant">
+                <span class="message-label">ASSISTANT / IA</span>
+                <p>
+                  Bonjour ! Je suis l’assistant IA de ce projet. Posez-moi une
+                  question sur l’intelligence artificielle.
+                </p>
+              </article>
+            </div>
+            <div class="chat-suggestions" id="chat-suggestions">
+              <button>Comment fonctionne ChatGPT ?</button
+              ><button>Qu’est-ce qu’un réseau neuronal ?</button
+              ><button>Comment une IA apprend-elle ?</button
+              ><button>Quelle différence entre IA et Machine Learning ?</button>
+            </div>
+            <p class="chat-error" id="chat-error" role="alert"></p>
+            <form class="chat-form" id="chat-form">
+              <label class="sr-only" for="chat-input"
+                >Votre question sur l'intelligence artificielle</label
+              ><textarea
+                id="chat-input"
+                rows="1"
+                maxlength="1500"
+                placeholder="Posez votre question…"
+                required
+              ></textarea
+              ><button
+                type="submit"
+                class="chat-send"
+                id="chat-send"
+                aria-label="Envoyer la question"
+              >
+                ↗</button
+              ><button
+                type="button"
+                class="chat-stop"
+                id="chat-stop"
+                hidden
+                aria-label="Annuler la réponse"
+              >
+                ■
+              </button>
+            </form>
+            <div class="chat-footnote mono">
+              <span>ENTRÉE POUR ENVOYER · MAJ + ENTRÉE POUR UNE LIGNE</span
+              ><span id="chat-count">0 / 1500</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="future dark" aria-labelledby="future-title">
+        <div class="section-meta">
+          <span>08 / IMAGINER</span><span>LE FUTUR RESTE À ÉCRIRE</span>
+        </div>
+        <p class="eyebrow reveal">NI CERTITUDE. NI SCIENCE-FICTION.</p>
+        <h2 id="future-title" class="reveal">
+          ET<br /><em>DEMAIN ?</em><span aria-hidden="true">↗</span>
+        </h2>
+        <div class="future-bottom">
+          <p class="reveal">
+            Des outils plus capables.<br />Des questions plus grandes.<br /><span
+              class="muted"
+              >À nous de choisir comment les utiliser.</span
+            >
+          </p>
+          <div class="future-fields">
+            <span class="reveal">Agents IA</span
+            ><span class="reveal">Robotique</span
+            ><span class="reveal">Recherche scientifique</span
+            ><span class="reveal">Médecine</span
+            ><span class="reveal">Éducation</span
+            ><span class="reveal">Programmation</span
+            ><span class="reveal">Créativité</span
+            ><span class="reveal">Interaction humain-machine</span>
+          </div>
+        </div>
+        <p class="future-disclaimer muted">
+          Pistes de recherche et d’usage, pas des prédictions : fiabilité,
+          supervision humaine, protection des données et impact environnemental
+          restent essentiels.
+        </p>
+      </section>
+      <section class="section finale" aria-labelledby="final-title">
+        <span class="eyebrow reveal">CE N’EST QUE LE COMMENCEMENT.</span>
+        <h2 id="final-title" class="reveal">
+          L’IA N’EST PAS<br />SEULEMENT UNE<br />TECHNOLOGIE.<br /><em
+            >C’EST UNE NOUVELLE<br />FAÇON D’INTERAGIR<br />AVEC
+            L’INFORMATION.</em
+          >
+        </h2>
+        <div class="final-signature">
+          <span class="team-logo" data-logo="team"
+            ><span class="team-symbol">✳</span></span
+          >
+          <div>
+            <span class="mono">PROJET RÉALISÉ PAR</span
+            ><strong id="team-name">L’équipe du laboratoire</strong>
+          </div>
+          <a class="round-link magnetic" href="#ia" aria-label="Retour en haut"
+            >↑</a
+          >
+        </div>
+      </section>
+    </main>
+    <footer>
+      <a class="brand-mark" href="#ia">iA<span>®</span></a
+      ><span class="mono">COMPRENDRE. EXPLORER. EXPÉRIMENTER.</span>
+      <div>
+        <a href="index.html">Portfolio ↗</a
+        ><a href="sources.html">Sources & repères ↗</a
+        ><button id="logout">Déconnexion ↗</button>
+      </div>
+      <span class="school-logo" data-logo="school"><span>ÉCOLE</span></span>
+    </footer>
+    <noscript
+      ><div class="noscript">
+        Activez JavaScript pour les expériences interactives et la connexion. Le
+        contenu pédagogique reste lisible.
+      </div></noscript
+    >
+  </body>
+</html>

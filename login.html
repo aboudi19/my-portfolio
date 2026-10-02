@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#101211" />
+    <title>Entrer dans le laboratoire — IA</title>
+    <link rel="icon" href="assets/logos/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <script src="js/config.js"></script>
+    <script type="module" src="js/login.js"></script>
+  </head>
+  <body class="login-page">
+    <a href="#login-form" class="skip-link">Aller au formulaire</a>
+    <div class="login-light" aria-hidden="true"></div>
+    <div class="login-scene" aria-hidden="true">
+      <canvas
+        class="login-canvas"
+        data-scene="sphere"
+        data-theme="dark"
+        aria-hidden="true"
+      ></canvas>
+    </div>
+    <div class="login-grid" aria-hidden="true"></div>
+    <header class="login-header">
+      <a class="brand-mark" href="login.html" aria-label="Le laboratoire IA"
+        >iA<span>®</span></a
+      ><span class="mono"><a href="index.html">RETOUR AU PORTFOLIO ↗</a></span
+      ><span class="school-logo" data-logo="school"><span>ÉCOLE</span></span>
+    </header>
+    <main class="login-main">
+      <div class="login-intro">
+        <span class="eyebrow"
+          ><span class="status-dot"></span> LE LABORATOIRE DES POSSIBLES</span
+        >
+        <h1>
+          <span>ARTIFICIAL</span><span class="outlined">INTELLIGENCE</span
+          ><span class="login-title-dot">.</span>
+        </h1>
+        <p>Une nouvelle façon<br />de voir le monde.</p>
+        <span class="mono login-fig">FIG. 000 / LE POINT DE DÉPART</span>
+      </div>
+      <div class="login-form-wrap">
+        <div class="login-form-top">
+          <span class="team-logo" data-logo="team"
+            ><span class="team-symbol">✳</span></span
+          ><span class="mono"
+            >ACCÈS À L’EXPOSITION<br />COMPRENDRE · EXPLORER ·
+            EXPÉRIMENTER</span
+          >
+        </div>
+        <h2>Bienvenue<br />dans le <em>laboratoire.</em></h2>
+        <p class="login-subtitle">L’exploration commence avec vous.</p>
+        <form id="login-form">
+          <label for="display-name">VOTRE NOM</label>
+          <div class="input-wrap">
+            <input
+              id="display-name"
+              name="display_name"
+              type="text"
+              autocomplete="given-name"
+              placeholder="Comment vous appelez-vous ?"
+              minlength="2"
+              maxlength="50"
+              required
+            /><span aria-hidden="true">↗</span>
+          </div>
+          <label for="password">MOT DE PASSE</label>
+          <div class="input-wrap">
+            <input
+              id="password"
+              name="password"
+              type="password"
+              autocomplete="current-password"
+              placeholder="Le code du laboratoire"
+              maxlength="100"
+              required
+            /><button
+              type="button"
+              id="toggle-password"
+              aria-label="Afficher le mot de passe"
+              aria-pressed="false"
+            >
+              ◉
+            </button>
+          </div>
+          <p id="login-error" class="login-error" role="alert"></p>
+          <button type="submit" id="login-submit" class="button light magnetic">
+            Entrer dans l’expérience <span>↗</span>
+          </button>
+          <p class="login-note">
+            Démonstration scolaire. Le code d’accès est communiqué par l’équipe.
+            Ce code partagé ne constitue pas une authentification sécurisée.
+          </p>
+        </form>
+      </div>
+    </main>
+    <footer class="login-footer">
+      <span class="mono">INTELLIGENCE ARTIFICIELLE / PROJET PÉDAGOGIQUE</span
+      ><span class="mono">2026 © LE LABORATOIRE</span>
+    </footer>
+    <div class="page-transition login-transition" aria-hidden="true">
+      <span class="team-logo" data-logo="team"
+        ><span class="team-symbol">✳</span></span
+      ><span id="transition-greeting">L’EXPLORATION COMMENCE.</span>
+    </div>
+    <noscript
+      ><div class="noscript">
+        JavaScript est nécessaire pour entrer dans l’expérience.
+      </div></noscript
+    >
+  </body>
+</html>
